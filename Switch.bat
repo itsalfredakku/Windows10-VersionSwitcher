@@ -9,7 +9,8 @@ ECHO 1. Windows 10 Pro
 ECHO 2. Windows 10 Pro VL
 ECHO 3. Windows 10 Education VL
 ECHO 4. Windows 10 Enterprise VL
-ECHO 5. Exit
+ECHO 5. Windows 10 Enterprise
+ECHO 6. Exit
 ECHO.
 
 set choice=
@@ -20,7 +21,8 @@ if '%choice%'=='1' goto to_pro
 if '%choice%'=='2' goto to_pro_vl
 if '%choice%'=='3' goto to_edu_vl
 if '%choice%'=='4' goto to_ent_vl
-if '%choice%'=='5' goto end
+if '%choice%'=='5' goto to_ent
+if '%choice%'=='6' goto end
 goto start
 
 :to_pro
@@ -38,6 +40,11 @@ goto finish
 :to_ent_vl
 changepk /ProductKey NPPR9-FWDCX-D2C8J-H872K-2YT43
 goto finish
+
+:to_ent
+changepk /ProductKey NPPR9-FWDCX-D2C8J-H872K-2YT43
+goto finish
+
 
 :finish
 ECHO.
